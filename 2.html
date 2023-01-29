@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rodrigo</title>
+</head>
+
+<body>
+    <section>
+        <div id="caja1"></div>
+        <div id="caja2"></div>
+        <div id="caja3"></div>
+        <div id="caja4"></div>
+    </section>
+    <style>
+        section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        div {
+            width: 250px;
+            height: 250px;
+            margin: 1em;
+        }
+
+        #caja1 {
+            background-color: red;
+        }
+
+        #caja2 {
+            background-color: yellow;
+        }
+
+        #caja3 {
+            background-color: rgb(21, 177, 0);
+        }
+
+        #caja4 {
+            background-color: blue;
+        }
+    </style>
+    <script>
+        const caja1 = document.querySelector("#caja1")
+        const caja2 = document.querySelector("#caja2")
+        const caja3 = document.querySelector("#caja3")
+        const caja4 = document.querySelector("#caja4")
+
+        //cambiar color con teclas
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'a') {
+                return caja1.style.backgroundColor = "black";
+            } else if (event.key === 's') {
+                return caja2.style.backgroundColor = "purple";
+            }
+            else if (event.key === 'd') {
+                return caja3.style.backgroundColor = "orange";
+            }
+        })
+
+        // volver a color con click
+        caja1.addEventListener('click', function (event) {
+            return caja1.style.backgroundColor = "red"
+        })
+        caja2.addEventListener('click', function (event) {
+            return caja2.style.backgroundColor = "yellow"
+        })
+        caja3.addEventListener('click', function (event) {
+            return caja3.style.backgroundColor = "green"
+        })
+
+    </script>
+</body>
+
+</html>
